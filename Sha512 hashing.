@@ -1,0 +1,10 @@
+import hashlib
+
+def hash_sha512_with_salt(text, salt):
+    combined = salt + text
+    hash_object = hashlib.sha512(combined.encode())
+    return hash_object.hexdigest()
+
+input_text = input("input text:")
+salt = "random_salt123"
+print("SHA512 + Salt:", hash_sha512_with_salt(input_text, salt))
