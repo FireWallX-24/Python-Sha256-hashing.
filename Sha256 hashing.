@@ -11,7 +11,7 @@ def hash_password(password):
     
     return salt.hex(), hashed_password
     
-password = input("input to text:")
+password = input("input text:")
 salt, hashed = hash_password(password)
 
 print("Salt:", salt)
