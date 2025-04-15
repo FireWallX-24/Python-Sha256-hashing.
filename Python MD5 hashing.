@@ -1,0 +1,10 @@
+import hashlib
+
+def hash_md5_with_salt(text, salt):
+    combined = salt + text
+    hash_object = hashlib.md5(combined.encode())
+    return hash_object.hexdigest()
+
+input_text = input("input text:)
+salt = "random_salt123"
+print("MD5 + Salt:", hash_md5_with_salt(input_text, salt))
